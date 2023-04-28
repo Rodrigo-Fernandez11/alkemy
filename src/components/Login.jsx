@@ -1,6 +1,13 @@
 import axios from 'axios';
+import swal from 'sweetalert';
+
 
 export function Login() {
+
+    swal(
+        <h2>esto va a funcionar</h2>
+    );
+
     const submitHandler = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
