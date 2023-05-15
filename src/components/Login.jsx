@@ -1,5 +1,5 @@
 import axios from 'axios';
-import swAlert from 'sweetalert';
+import swAlert from 'sweetalert2';
 
 
 export function Login() {
@@ -56,6 +56,8 @@ export function Login() {
                     <input type="password" name="password"/>
                 </label>
 
+                <br/>
+                
                 <button type="submit">ingresar</button>
             </form>
         </>
