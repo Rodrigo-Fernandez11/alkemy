@@ -1,20 +1,23 @@
-import './App.css'
-import './components/Login'
-import { Login } from './components/Login'
-import { Switch, Route} from 'react-router-dom'
-import Listado from './components/Listado'
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Listado from './components/Listado';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Login } from './components/Login';
 
 function App() {
-  
-
   return (
-    <>
-    <Switch>
-      <Route exact path='/' component={Login} />
-      <Route path='/listado' component={Listado} />
-    </Switch>
-    </>
-  )
+    <div>
+      <Header />
+      <div className="content-container">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/listado" element={<Listado />} />
+        </Routes>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
