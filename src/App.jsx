@@ -1,22 +1,25 @@
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Listado from './components/Listado';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import { Login } from './components/Login';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Listado } from "./pages/Listado";
+import { Login } from "./pages/Login";
+import { NotFound } from "./pages/NotFound";
+import { AboutMe } from "./pages/Aboutme";
+
 
 function App() {
+
   return (
-    <div>
-      <Header />
-      <div className="content-container">
+    <>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/listado" element={<Listado />} />
+          <Route path='/' element= { <Login  /> } />
+          <Route path='/Home' element= { <Home /> } />
+          <Route path='/Listado' element= { <Listado /> } />
+          <Route path='/AboutMe' element= { <AboutMe /> } />
+          <Route path='*' element={ <NotFound /> } />
         </Routes>
-      </div>
-      <Footer />
-    </div>
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -1,31 +1,24 @@
 import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-function NavBar() {
+export const Navbarme = () => {
   return (
-    <Navbar bg="light" expand="lg" fixed="top">
-      <div className="container">
-        <Link className="navbar-brand" to="/">
-          Inicio
-        </Link>
-        <Navbar.Toggle aria-controls="navbarNav" />
-        <Navbar.Collapse id="navbarNav">
-          <Nav className="ml-auto">
-            <Nav.Item>
-              <Link to="/listado" className="nav-link">
-                Listado
-              </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link to="/contacto" className="nav-link">
-                Contacto
-              </Link>
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </div>
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar.Brand href="#home">My App</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="me-auto">
+          <NavLink to="/Home" className="nav-link" activeClassName="active">
+            Home
+          </NavLink>
+          <NavLink to="/Listado" className="nav-link" activeClassName="active">
+            Listado
+          </NavLink>
+          <NavLink to="/AboutMe" className="nav-link" activeClassName="active">
+            About Me
+          </NavLink>
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
   );
-}
-
-export default NavBar;
+};
