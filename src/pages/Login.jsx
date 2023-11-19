@@ -1,28 +1,23 @@
 import { useState } from "react";
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import Swal from 'sweetalert2';
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { CardInfo } from "../components/CardInfo";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Hook para navegar
 
   const handleLogin = () => {
-    if (username === 'user' && password === 'password') {
-      // SetLoggedIn(true); // Supongamos que esta línea actualiza el estado de loggedIn
-
-      // Mostrar la alerta una vez que se haya iniciado sesión
-      Swal.fire({
-        title: "Success!",
-        text: "You have successfully logged in.",
-        icon: "success",
-        confirmButtonText: "OK"
-      });
+    if (username === "user" && password === "1234") {
+      navigate("/home"); // Redirección a '/home'
     } else {
       Swal.fire({
         title: "Error",
         text: "Invalid username or password.",
         icon: "error",
-        confirmButtonText: "OK"
+        confirmButtonText: "OK",
       });
     }
   };
@@ -60,6 +55,14 @@ export const Login = () => {
           </Form>
         </Col>
       </Row>
+      <CardInfo
+        message="This login does not perform validation with the backend, we simply simulate a login to practice react router dom 6 protected routes"
+        title="🚨 Important"
+      />
+      <CardInfo
+        message="Access information password='1234' username='user'"
+        title="🔑 Info"
+      />
     </Container>
   );
 };

@@ -1,14 +1,14 @@
-import { Container, Row, Col, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col, ListGroup } from "react-bootstrap";
 
 export const KeyFeatures = () => {
   const features = [
-    'Create a routing system with React Router DOM 6',
-    'Login with data validation',
-    'Inform the user if validation was successful with an alert using SweetAlert2',
-    'Use protected routes from React Router for login',
-    'Create a NotFound route to display when the user searches for a non-existent route',
-    'API consumption using Axios to display detailed information of Rick and Morty characters in card format',
-    'Create a contact page with details for communication',
+    "Create a routing system with React Router DOM 6",
+    "Login with data validation",
+    "Inform the user if validation was successful with an alert using SweetAlert2",
+    "Use protected routes from React Router for login",
+    "Create a NotFound route to display when the user searches for a non-existent route",
+    "API consumption using Axios to display detailed information of Rick and Morty characters in card format",
+    "Create a contact page with details for communication",
   ];
 
   return (

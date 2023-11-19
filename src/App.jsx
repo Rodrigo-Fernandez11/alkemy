@@ -6,13 +6,14 @@ import { NotFound } from "./pages/NotFound";
 import { AboutMe } from "./pages/Aboutme";
 
 
+
 function App() {
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element= { <Login  /> } />
+          <Route path='/' element= { <Login /> } />
           <Route path='/home' element= { <Home /> } />
           <Route path='/listado' element= { <Listado /> } />
           <Route path='/aboutMe' element= { <AboutMe /> } />

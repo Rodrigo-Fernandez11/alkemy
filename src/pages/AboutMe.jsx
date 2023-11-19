@@ -1,6 +1,6 @@
-import { Row, Col, Card, Button, Image } from 'react-bootstrap';
-import { Navbarme } from '../components/Navbar';
-import meImage from '../assets/meImage.jpg';
+import { Row, Col, Card, Button, Image } from "react-bootstrap";
+import { Navbarme } from "../components/Navbar";
+import meImage from "../assets/meImage.jpg";
 
 export const AboutMe = () => {
   return (
@@ -13,12 +13,22 @@ export const AboutMe = () => {
               <Card.Body>
                 <Card.Title className="text-center mb-4">Contact me</Card.Title>
                 <Col className="text-center mb-4">
-                  <Image src={meImage} roundedCircle style={{ width: '250px' }}/>
+                  <Image
+                    src={meImage}
+                    roundedCircle
+                    style={{ width: "250px" }}
+                  />
                   <h4>Software engineer</h4>
                 </Col>
-                
+
                 <Card.Text className="text-center">
-                  Hello, my name is Rodrigo Peña Fernández. I hope you liked my project. If you have any questions or recommendations, they will be very welcome. Also, if you´d like to see more of my projects, I invite you to explore my Github or other social networks where I share a bit about myself and my experience as a software engineer. If you´d like to discuss a job proposal, feel free to contact me via LinkedIn or Gmail:
+                  Hello, my name is Rodrigo Peña Fernández. I hope you liked my
+                  project. If you have any questions or recommendations, they
+                  will be very welcome. Also, if you´d like to see more of my
+                  projects, I invite you to explore my Github or other social
+                  networks where I share a bit about myself and my experience as
+                  a software engineer. If you´d like to discuss a job proposal,
+                  feel free to contact me via LinkedIn or Gmail:
                   <br />
                   rodrip602@gmail.com
                 </Card.Text>
