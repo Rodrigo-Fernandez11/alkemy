@@ -3,7 +3,7 @@ import { Home } from "./pages/Home";
 import { Listado } from "./pages/Listado";
 import { Login } from "./pages/Login";
 import { NotFound } from "./pages/NotFound";
-import { AboutMe } from "./pages/Aboutme";
+import { AboutMe } from "./pages/AboutMe";
 
 
 
